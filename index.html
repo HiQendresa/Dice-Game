@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Dice Game: Run To 20</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/wrapper.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <!-- fontawesome link -->
+    <script
+      src="https://kit.fontawesome.com/3cc1ebfc7c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="wrapper grid">
+      <!--Player 1 Panel-->
+      <div class="player-panel player-0-panel grid flow">
+        <div class="table-container flex" id="table-container-0">
+          <!-- <div class="player-0-score-block-red"></div> -->
+        </div>
+        <div class="play-info grid flow text-shadow">
+          <div class="player-name pl0name flex">
+            <p class="">Player 1</p>
+            <i class="fas fa-circle player-0-panel-live flex" id="live-0"></i>
+          </div>
+
+          <i class="far fa-user-circle"></i>
+
+          <div
+            class="player-0-score-block"
+            id="player-0-score-block"
+            style="overflow: hidden"
+          >
+            <div class="player-0-score-block-red"></div>
+          </div>
+          <div class="player-panel-score flex">
+            <i class="fas fa-poll"></i>
+            <span class="player-0-panel-score-figure" id="finalScore-0">
+              50</span
+            >
+          </div>
+
+          <div
+            class="player-winner invisible grid justify-center flow"
+            id="winner-0"
+          >
+            <p class="winner">winner</p>
+            <i class="fas fa-trophy"></i>
+          </div>
+        </div>
+      </div>
+      <!--Player 1 Panel End-->
+      <!-- Dice Panel -->
+
+      <div class="dice-panel-wrapper grid">
+        <!--Restart Start-->
+        <button class="btn-reset">
+          <i class="fas fa-power-off d-block"></i>
+          <p>Restart</p>
+        </button>
+        <!-- Restart End -->
+
+        <div class="dice-1 grid">
+          <img src="img/dice-6.png" class="dice" />
+        </div>
+
+        <!--Dice Panel End-->
+
+        <!--Roll Dice Start -->
+        <button class="btn-roll-dice flex">
+          <i class="fas fa-dice"></i>
+          Roll dice
+        </button>
+        <!--Roll Dice End-->
+      </div>
+
+      <!--Player 2 Panel-->
+      <div class="player-panel player-1-panel grid flow">
+        <div class="table-2 table-container flex" id="table-container-1"></div>
+        <div class="play-info grid flow">
+          <div class="player-name pl1name flex">
+            <p>Player 2</p>
+
+            <i
+              class="fas fa-circle player-0-panel-live-right flex"
+              id="live-1"
+            ></i>
+          </div>
+
+          <i class="far fa-user-circle"></i>
+
+          <div
+            class="player-1-score-block"
+            id="player-1-score-block"
+            style="overflow: hidden"
+          ></div>
+
+          <div class="player-panel-score flex">
+            <i class="fas fa-poll"></i>
+            <span class="player-0-panel-score-figure" id="finalScore-1">
+              50</span
+            >
+          </div>
+
+          <div
+            class="player-winner invisible grid justify-center flow"
+            id="winner-1"
+          >
+            <p class="winner">winner</p>
+            <i class="fas fa-trophy"></i>
+          </div>
+        </div>
+      </div>
+      <!--Player 2 Panel End-->
+    </div>
+    <!--Wrapper End-->
+  </body>
+
+  <!-- Load the dice script-->
+  <script src="js/dice.js"></script>
+</html>

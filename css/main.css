@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap");
+/* variables */
+:root {
+  --clr-bg-1: hsl(263, 55%, 52%);
+  --clr-bg-2: hsl(217, 19%, 35%);
+  --clr-dark: hsl(219, 29%, 14%);
+  --clr-white: hsl(0, 0%, 100%);
+  /* Neutral */
+  --clr-light-gray: hsl(0, 0%, 81%);
+  --clr-light-blue: hsl(210, 46%, 95%);
+  /* Font-family */
+  --ff-serif: "Bellefair", serif;
+  --ff-sans-cond: "Barlow Condensed", sans-serif;
+  --ff-weight-100: 500;
+  --ff-weight-300: 600;
+}
+
+/* global classes */
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.flow > :where(:not(:first-child)) {
+  margin-top: var(--flow-space, 1rem);
+}
+
+/* background color */
+.bg1-clr {
+  background-color: var(--clr-bg-1);
+}
+
+.bg2-clr {
+  background-color: var(--clr-bg-2);
+}
+
+.bg-white {
+  background-color: var(--clr-white);
+}
+
+.bg1-dark {
+  background-color: var(--clr-dark);
+}
+
+/* colors */
+.text-dark {
+  color: var(--clr-dark);
+}
+
+.text-accent {
+  color: var(--clr-light-gray);
+}
+
+.text-white {
+  color: var(--clr-white);
+}
+
+.d-block {
+  display: block;
+}
+
+.justify-center {
+  justify-content: center;
+  justify-items: center;
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.invisible {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* body style */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  box-sizing: border-box;
+  font-size: 0.85rem;
+  background-color: var(--clr-light-blue);
+  font-family: var(--ff-sans-cond);
+  font-weight: var(--ff-weight-100);
+  color: var(--clr-white);
+}
+
+body .wrapper {
+  max-width: 90rem;
+  margin-inline: auto;
+  margin-top: 3rem;
+  background-color: #fff;
+  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(255, 255, 255, 0.73)), url("../img/brett-jordan-4aB1nGtD_Sg-unsplash.jpg");
+  background-size: cover;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
+  color: black;
+  grid-template-columns: 1fr 0.3fr 1fr;
+  --gap: 0rem;
+}
+
+body .wrapper .player-panel {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.7fr 1fr;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+body .wrapper .player-panel .play-info {
+  justify-items: center;
+}
+
+body .wrapper .player-panel .play-info .player-name {
+  font-size: 3.12rem;
+  font-family: var(--ff-serif);
+  justify-content: space-between;
+  align-items: center;
+  --gap: 1rem;
+}
+
+body .wrapper .player-panel .play-info .player-name .fa-circle::before {
+  font-size: 2rem;
+  display: flex;
+  color: greenyellow;
+  border: 1px solid #c6e434;
+  border-radius: 100%;
+}
+
+body .wrapper .player-panel .play-info .fa-user-circle::before {
+  font-size: 6rem;
+}
+
+body .wrapper .player-panel .play-info .player-panel-score {
+  background-color: #c3b9b9;
+  padding: 10px 50px;
+  border-radius: 30px;
+  color: black;
+  font-size: 1.3rem;
+  justify-content: space-around;
+  align-items: center;
+}
+
+body .wrapper .player-panel .play-info .player-panel-score .fa-poll::before {
+  color: white;
+}
+
+body .wrapper .player-panel .play-info .winner {
+  text-transform: uppercase;
+  font-size: 30px;
+  color: black;
+}
+
+body .wrapper .player-panel .play-info .fa-trophy::before {
+  font-size: 8rem;
+  color: #e99f15;
+}
+
+body .wrapper .player-panel .table-2 {
+  order: 1;
+  justify-self: right;
+  margin-right: 20px;
+}
+
+body .wrapper .table-container {
+  margin-left: 20px;
+  width: 110px;
+  height: 31.9rem;
+  background-color: #945a5a;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  justify-content: end;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-direction: column;
+  -gap: 0.3rem;
+}
+
+body .wrapper .table-container .player-0-score-block-red {
+  background: repeating-linear-gradient(45deg, transparent, transparent 10px, #e99292 10px, #c07070 20px), linear-gradient(to bottom, #c50e0e, #be0000);
+  background-color: rgba(0, 0, 0, 0);
+  background-color: orangered;
+  height: 40px;
+  width: 40px;
+  margin: 5px;
+  border-radius: 2px;
+}
+
+body .wrapper .dice-panel-wrapper {
+  justify-content: center;
+}
+
+body .wrapper .dice-panel-wrapper .btn-reset {
+  cursor: pointer;
+  flex-direction: column;
+  background-color: transparent;
+  border: none;
+  font-size: 22px;
+}
+
+body .wrapper .dice-panel-wrapper .btn-reset i {
+  transition: all 0.5s;
+  font-size: 40px;
+  color: #e05a5a;
+  text-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+body .wrapper .dice-panel-wrapper .btn-reset i:hover {
+  transform: scale(1.1);
+  color: #c04444;
+  text-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+body .wrapper .dice-panel-wrapper .dice-panel {
+  margin: auto;
+  max-width: 5rem;
+}
+
+body .wrapper .dice-panel-wrapper .dice-1 {
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+  height: 85px;
+  width: 85px;
+  background-color: #fff;
+  margin: auto;
+}
+
+body .wrapper .dice-panel-wrapper .dice-1 img {
+  border-radius: 1rem;
+}
+
+body .wrapper .dice-panel-wrapper .btn-roll-dice {
+  cursor: pointer;
+  flex-direction: column;
+  background-color: transparent;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  font-size: 22px;
+}
+
+body .wrapper .dice-panel-wrapper .btn-roll-dice i {
+  transition: all 0.5s;
+  font-size: 40px;
+  color: #e05a5a;
+  text-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+body .wrapper .dice-panel-wrapper .btn-roll-dice i:hover {
+  transform: scale(1.1);
+  color: #c04444;
+  text-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+}

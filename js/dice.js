@@ -1,4 +1,5 @@
-// get the data we want to manipulate
+'use strict';
+
 // clicked the dice
 const rolledDice = document.querySelector('.btn-roll-dice');
 const resetBtn = document.querySelector('.btn-reset');

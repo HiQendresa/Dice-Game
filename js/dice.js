@@ -22,8 +22,8 @@ rolledDice.addEventListener('click', () => {
         // set the live player
         document.getElementById('live-' + livePlayer).classList.remove('invisible');
 
-        PlayerScores[livePlayer] += dice;
-        console.log('these are the points: ', PlayerScores[livePlayer]);
+       PlayerScores[livePlayer] += dice;
+//         console.log('these are the points: ', PlayerScores[livePlayer]);
         scoreBlock();
         document.querySelector('#finalScore-' + livePlayer).textContent = PlayerScores[livePlayer];
   
@@ -100,14 +100,7 @@ document.querySelector('#winner-1').classList.add('invisible');
 }
  
 
-//  exercisee
-// var arr = [0, 0];
-// var items = 0;
-// document.getElementById('click').addEventListener("click", () => {
-//    var dice = Math.floor(Math.random() * 6 + 1);
-//     console.log(dice);
-//     arr[items] += dice;
- 
+
 //     var point0 = document.querySelector('.point-' + items).innerHTML = arr[items];
 //     items === 0 ? items = 1 : items = 0;
 //       console.log('palyer 1:', point0);

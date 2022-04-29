@@ -41,7 +41,7 @@ rolledDice.addEventListener('click', () => {
 });
 
 function scoreBlock() {
-    size = PlayerScores[livePlayer];
+    let size = PlayerScores[livePlayer];
     if (size > 20) {
         size = 20;
     }
